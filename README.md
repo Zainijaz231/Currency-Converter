@@ -1,6 +1,6 @@
 # 💱 Currency Converter
 
-A premium-grade currency converter application built with React 19 and modern web technologies. Features real-time exchange rates, comprehensive dark mode, glass-morphism design, and seamless user experience with auto-conversion capabilities.
+A premium-grade currency converter application built with React 19 and modern web technologies. Features real-time exchange rates, comprehensive dark mode, glass-morphism design, and seamless user experience with auto-conversion capabilities. live demon https://currency-converter-pied-tau.vercel.app/
 
 ![Currency Converter Preview](https://img.shields.io/badge/React-19.1.1-blue?style=for-the-badge&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
