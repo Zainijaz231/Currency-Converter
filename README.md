@@ -60,7 +60,7 @@ A premium-grade currency converter application built with React 19 and modern we
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>](https://github.com/Zainijaz231/Currency-Converter
+   git clone https://github.com/Zainijaz231/Currency-Converter
    cd currency-projects
    ```
 
