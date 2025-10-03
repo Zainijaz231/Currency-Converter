@@ -1,0 +1,290 @@
+:root {
+  font-family: 'Segoe UI', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Input Component Styles */
+.input-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Dark mode input box */
+[data-theme="dark"] .input-box {
+  background: rgba(40, 40, 50, 0.9);
+  border: 1px solid rgba(80, 80, 100, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(120, 120, 150, 0.1);
+}
+
+.input-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-section {
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode input label */
+[data-theme="dark"] .input-label {
+  color: #e0e0e0;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.amount-input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.amount-input:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.currency-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.currency-label {
+  font-weight: 600;
+  color: #555;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.currency-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.currency-select:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Dark mode currency select */
+[data-theme="dark"] .currency-select {
+  background: rgba(50, 50, 60, 0.9);
+  border-color: rgba(120, 120, 180, 0.4);
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .currency-select:focus {
+  border-color: #a78bfa;
+  background: rgba(60, 60, 70, 0.95);
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.1);
+}
+
+[data-theme="dark"] .currency-select option {
+  background: rgba(40, 40, 50, 0.95);
+  color: #e0e0e0;
+}
+
+.currency-select:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.currency-select option {
+  padding: 0.5rem;
+  font-weight: 500;
+}
+
+/* Enhanced Input Styles */
+.input-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  padding: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.input-container:focus-within {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* Dark mode input container */
+[data-theme="dark"] .input-container {
+  background: rgba(50, 50, 60, 0.9);
+  border-color: rgba(120, 120, 180, 0.4);
+}
+
+[data-theme="dark"] .input-container:focus-within {
+  border-color: #a78bfa;
+  background: rgba(60, 60, 70, 0.95);
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.1);
+}
+
+.input-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.currency-display {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Dark mode currency display */
+[data-theme="dark"] .currency-display {
+  background: linear-gradient(135deg, #a78bfa, #c084fc);
+  box-shadow: 0 3px 10px rgba(167, 139, 250, 0.4);
+}
+
+.currency-symbol {
+  font-weight: 700;
+  color: #667eea;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode currency symbol */
+[data-theme="dark"] .currency-symbol {
+  color: #a78bfa;
+}
+
+.currency-select-container {
+  position: relative;
+}
+
+.select-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #667eea;
+  font-size: 0.8rem;
+}
+
+.currency-select {
+  appearance: none;
+  padding-right: 3rem;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 480px) {
+  .input-box {
+    padding: 1.5rem;
+  }
+  
+  .input-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .currency-symbol {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    align-self: flex-start;
+  }
+  
+  .amount-input {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .currency-select {
+    padding: 0.8rem 2.5rem 0.8rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
