@@ -246,7 +246,7 @@ This application uses **ExchangeRate-API** for real-time exchange rates:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📞 Support
+
 
 If you have any questions or need help with this project, please open an issue or contact the maintainer.
 
